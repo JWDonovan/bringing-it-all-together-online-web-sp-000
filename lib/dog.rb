@@ -28,6 +28,15 @@ class Dog
   end
 
   def save
+    if self.id
+      self.update
+    else
+      sql = <<-SQL
+        DROP TABLE IF EXISTS dogs
+      SQL
+
+      DB[:conn].execute(sql)
+    end
   end
 
   def self.create(name:, breed:)
