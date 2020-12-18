@@ -32,7 +32,8 @@ class Dog
       self.update
     else
       sql = <<-SQL
-        DROP TABLE IF EXISTS dogs
+        INSERT INTO dogs (name, breed)
+        VALUES (?, ?)
       SQL
 
       DB[:conn].execute(sql)
