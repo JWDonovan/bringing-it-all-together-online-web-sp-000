@@ -26,4 +26,18 @@ class Dog
 
     DB[:conn].execute(sql)
   end
+
+  def save
+  end
+
+  def self.create
+  end
+
+  def self.new_from_db
+  end
+
+  def self.find_by_id
+  end
+
+  def self.find_by_or_create_by(name:, breed:)
 end
