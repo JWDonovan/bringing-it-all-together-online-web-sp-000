@@ -30,10 +30,10 @@ class Dog
   def save
   end
 
-  def self.create
+  def self.create(name:, breed:)
   end
 
-  def self.new_from_db
+  def self.new_from_db(row)
   end
 
   def self.find_by_id(id)
