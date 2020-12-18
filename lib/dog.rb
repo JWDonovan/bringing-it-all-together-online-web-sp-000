@@ -43,7 +43,7 @@ class Dog
       LIMIT 1
     SQL
 
-    DB[:conn].execute(sql)
+    DB[:conn].execute(sql).map{ |dog| self.new_from_db(dog) }.first
   end
 
   def self.find_or_create_by(name:, breed:)
