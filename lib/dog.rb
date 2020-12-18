@@ -55,7 +55,7 @@ class Dog
       LIMIT 1
     SQL
 
-    DB[:conn].execute(sql)
+    dog = DB[:conn].execute(sql)
   end
 
   def self.find_by_name(name)
