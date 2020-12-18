@@ -43,6 +43,11 @@ class Dog
   end
 
   def self.find_by_name(name)
+    sql = <<-SQL
+      DROP TABLE IF EXISTS dogs
+    SQL
+
+    DB[:conn].execute(sql, name)
   end
 
   def update
