@@ -1,3 +1,3 @@
 class Dog
-  def initialize(name:, breed:)
+  def initialize(id: nil, name:, breed:)
 end
